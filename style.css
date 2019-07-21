@@ -89,3 +89,193 @@ a {
 .between-sec-color {
     color: var(--main-white);
 }
+
+/********** Start Header **********/
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .9), transparent), url(images/hero3.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+/* Header - Nav Toggler */
+.menu-toggler {
+    padding: 2rem 2.5rem;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.menu-toggler .bar,
+.menu-toggler .bar::before,
+.menu-toggler .bar::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 4rem;
+    background-color: var(--main-white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 650ms;
+}
+
+.menu-toggler .bar::before {
+    top: -2rem;
+}
+
+.menu-toggler .bar::after {
+    top: 2rem;
+}
+
+.active .bar {
+    background-color: transparent;
+}
+
+.active .bar::before {
+    transform: rotate(45deg);
+}
+
+.active .bar::after {
+    transform: rotate(-45deg);
+}
+
+.active .bar::before,
+.active .bar::after {
+    top: 0;
+}
+
+/* Header - Nav */
+#logo {
+    display: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: -5px;
+    border-bottom: 1px solid #fff;
+}
+
+.nav {
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.overlay.menu-open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.nav .overlay ul {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav .overlay ul li {
+    text-transform: uppercase;
+}
+
+.nav .overlay ul li a {
+    display: block;
+    font-size: 2rem;
+    transition: all 650ms;
+}
+
+.nav .overlay ul li a:hover,
+.nav .overlay ul li a.active:hover {
+    color: var(--main-font-color);
+    border-bottom-color: var(--main-font-color);
+}
+
+/* Header - Main Text */
+.main-text {
+    line-height: 0;
+    margin: auto;
+    color: var(--main-white);
+    user-select: none;
+}
+
+.main-text h1 {
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    font-size: 8rem;
+    font-weight: 100;
+    margin-bottom: 5rem;
+}
+
+.main-text h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-right: -5px;
+    font-size: 2rem;
+    line-height: 1;
+    position: relative;
+}
+
+.main-text h2::before,
+.main-text h2::after {
+    content: '';
+    width: 5rem;
+    height: 3px;
+    background-color: var(--main-white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 8px;
+}
+
+.main-text h2::before {
+    left: -6rem;
+}
+
+.main-text h2::after {
+    right: -6rem;
+}
+
+.main-btn {
+    border: 2px solid var(--main-font-color);
+    font-size: 1.5rem;
+    padding: 2rem 2.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .8);
+}
+
+.main-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+/********** End Header **********/
