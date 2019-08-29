@@ -34,7 +34,6 @@ a {
     color: var(--main-white);
 }
 
-
 /* Reusable styles */
 .btn {
     display: inline-block;
@@ -279,3 +278,78 @@ header {
     box-shadow: none;
 }
 /********** End Header **********/
+
+
+
+/* Section - Our Story */
+.store {
+    width: 100%;
+    min-height: 30rem;
+    background: url("images/store1.jpg") center no-repeat;
+    /* background-size: cover; */
+}
+
+/* Section - The best hop */
+.the-best-hop {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("images/between-first.jpg") top no-repeat;
+    background-size: cover;
+}
+
+/* Section - Our Menu */
+.image-group {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.image-group img {
+    width: 100%;
+    height: 30rem;
+}
+
+/* Section - Barley quality */
+.barley-quality {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("images/between-second.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/* Section - Contact Us */
+.contact-us form {
+    width: 100%;
+    min-width: 9rem;
+    margin-top: 5rem;
+}
+
+.input,
+.text-area {
+    width: 100%;
+    max-width: 100%;
+    margin: 5px 0;
+    padding: 5px 1rem;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    border: 1px solid var(--main-font-color);
+    color: #878787;
+}
+
+.input::placeholder,
+.text-area::placeholder {
+    color: #878787;
+}
+
+.text-area {
+    height: 10rem;
+}
+
+.btn-submit {
+    background-color: var(--main-font-color);
+    color: var(--main-white);
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.btn-submit:hover {
+    background-color: #e1aa2f;
+}
