@@ -8,6 +8,8 @@
 html {
     font-size: 10px;
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+    /* istotne */
 }
 
 :root {
@@ -346,6 +348,7 @@ header {
     color: var(--main-white);
     width: 100%;
     padding: 1rem 0;
+    cursor: pointer;
 }
 
 .btn-submit:hover {
